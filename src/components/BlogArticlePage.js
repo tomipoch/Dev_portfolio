@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import article1 from '../articles/article1';
 import article2 from '../articles/article2';
 
@@ -20,25 +21,13 @@ const BlogArticlePage = () => {
       <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
       <p className="text-sm text-gray-500 mb-6">{new Date(article.date).toLocaleDateString()}</p>
       
-      {/* Usamos ReactMarkdown para renderizar el contenido */}
+      {/* Renderiza contenido del artículo con ReactMarkdown y plugins */}
       <ReactMarkdown
         className="prose prose-lg"
+        remarkPlugins={[remarkGfm]}
         components={{
           img({ node, ...props }) {
-            return (
-              <img
-                {...props}
-                className="max-w-full h-auto my-4" // Clases Tailwind para ajustar las imágenes
-                alt={props.alt || 'Image'}
-              />
-            );
-          },
-          pre({ children, ...props }) {
-            return (
-              <pre className="bg-gray-100 border border-gray-200 rounded-xl p-4 my-4 text-gray-800 overflow-x-auto">
-                {children}
-              </pre>
-            );
+            return <img {...props} className="max-w-full h-auto my-4" alt={props.alt || 'Image'} />;
           },
           code({ node, inline, className, children, ...props }) {
             return inline ? (

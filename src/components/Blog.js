@@ -8,8 +8,8 @@ const writingsData = [article1, article2]; // Array de artículos
 
 const Blog = () => {
   return (
-    <section className="bg-gray-50 w-full py-10">
-      <div className="max-w-2xl mx-auto px-4">
+    <section className="bg-gray-50 px-4 py-10">
+      <div className="max-w-2xl mx-auto w-full">
         <h2 className="text-xl font-bold text-gray-800 mb-6">Blogs 📝</h2>
         <ul>
           {writingsData.map((writing) => (

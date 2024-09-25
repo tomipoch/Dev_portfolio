@@ -1,22 +1,22 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import CV from '../assets/Curriculum_Vitae.pdf'
-import Perfil from '../assets/perfil.jpeg'
+import CV from '../assets/Curriculum_Vitae.pdf';
+import Perfil from '../assets/perfil.jpeg';
 
 const Hero = () => {
   return (
-    <section className="flex flex-col justify-center bg-gray-50 transition-colors px-6"> {/* Eliminé py-12 para quitar el padding vertical */}
-      {/* Contenedor principal más angosto */}
-      <div className="max-w-2xl  mx-auto px-4 mb-10"> {/* Añadí px-4 para igualarlo a Projects */}
+    <section className="flex flex-col justify-center bg-gray-50 transition-colors px-6">
+      {/* Asegúrate de usar el mismo contenedor que en Projects */}
+      <div className="container mx-auto px-4 mb-10"> {/* Ajustado para alinearse con Projects */}
         
         {/* Perfil del usuario */}
-        <header className="flex flex-col items-start mb-10"> {/* Cambié a flex-col para alinear verticalmente */}
+        <header className="flex flex-col items-start mb-10">
           <img
             src={Perfil}
             alt="Profile"
             className="w-16 h-16 rounded-full mb-4" 
           />
-          <div className="text-left"> {/* text-left para justificar a la izquierda */}
+          <div className="text-left">
             <h1 className="text-xl font-bold text-gray-800">
               Tomás Poblete Chamorro
             </h1>
@@ -31,17 +31,16 @@ const Hero = () => {
 
         {/* Descripción */}
         <div className="mb-6">
-  <h2 className="text-lg font-semibold text-gray-800 mb-3">
-  Lo que hago 💭
-  </h2>
-  <p className="text-sm text-gray-600">
-    Soy especialista en desarrollo frontend con <span className="font-bold">React.js</span> y <span className="font-bold">Next.js</span>, apasionado por crear aplicaciones web dinámicas y responsivas. Además de mis competencias en frontend, cuento con experiencia en desarrollo backend utilizando <span className="font-bold">Node.js</span>, <span className="font-bold">Express.js</span> y <span className="font-bold">Spring</span>. A esto se suman mis conocimientos en bases de datos relacionales, como <span className="font-bold">Oracle Database</span> adquiridos en mi formación universitaria, así como <span className="font-bold">PostgreSQL</span> y <span className="font-bold">MySQL</span> aplicados en proyectos personales y de análisis de datos.
-  </p>
-  <p className="text-sm text-gray-600 mt-3">
-    Además de mis habilidades técnicas, tengo experiencia en diseño UX/UI con Figma, lo que me permite crear interfaces visualmente atractivas y fáciles de usar. También manejo herramientas de edición como Adobe Photoshop y Adobe Lightroom para fotografía, y Adobe Premiere para edición de video.
-  </p>
-</div>
-
+          <h2 className="text-lg font-semibold text-gray-800 mb-3">
+            Lo que hago 💭
+          </h2>
+          <p className="text-sm text-gray-600">
+            Soy especialista en desarrollo frontend con <span className="font-bold">React.js</span> y <span className="font-bold">Next.js</span>, apasionado por crear aplicaciones web dinámicas y responsivas. Además de mis competencias en frontend, cuento con experiencia en desarrollo backend utilizando <span className="font-bold">Node.js</span>, <span className="font-bold">Express.js</span> y <span className="font-bold">Spring</span>. A esto se suman mis conocimientos en bases de datos relacionales, como <span className="font-bold">Oracle Database</span> adquiridos en mi formación universitaria, así como <span className="font-bold">PostgreSQL</span> y <span className="font-bold">MySQL</span> aplicados en proyectos personales y de análisis de datos.
+          </p>
+          <p className="text-sm text-gray-600 mt-3">
+            Además de mis habilidades técnicas, tengo experiencia en diseño UX/UI con Figma, lo que me permite crear interfaces visualmente atractivas y fáciles de usar. También manejo herramientas de edición como Adobe Photoshop y Adobe Lightroom para fotografía, y Adobe Premiere para edición de video.
+          </p>
+        </div>
 
         {/* Enlaces de redes sociales y currículum */}
         <div className="flex items-center space-x-4">

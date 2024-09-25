@@ -1,5 +1,5 @@
 import React from 'react';
-import Forment from '../assets/GeneratePassword.png'; // Ruta de la imagen
+import Forment from '../assets/Forment.svg'; // Ruta de la imagen
 //import Omega from '../assets/Group 8.png'; // Ruta de la imagen
 import CriminalScan from '../assets/Frame 11.png'; // Ruta de la imagen
 import { GoArrowUpRight } from "react-icons/go";
